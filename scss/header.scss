@@ -1,0 +1,148 @@
+@import "vars";
+
+header {
+  background-color: $color-main;
+  position: sticky;
+  z-index: $ui4-layer;
+  top: 0;
+  width: 100%;
+  .headerContent {
+    @extend .contentBorder;
+    display: flex;
+    align-items: center;
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      height: max-content;
+    }
+    nav.links {
+      width: 100%;
+      ul {
+        display: flex;
+        gap: 32px;
+        li {
+          font-weight: 300;
+          font-size: $font-16;
+          a {
+            color: $color-black;
+          }
+        }
+      }
+    }
+    .callUs {
+      display: flex;
+      flex-direction: column;
+      min-width: max-content;
+      a, span {
+        line-height: 20px;
+      }
+      a {
+        color: $color-black;
+        font-weight: 400;
+        font-size: $font-16;
+      }
+      span {
+        color: $color-dark;
+        font-weight: 300;
+        font-size: $font-12;
+      }
+    }
+    .userMenu {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      li {
+        height: 24px;
+      }
+    }
+  }
+  @media #{$ui-desktop-interval} {
+    height: 100px;
+    .headerContent {
+      gap: 60px;
+      #burgerIcon,
+      .callUs > .phoneIcon {
+        display: none;
+      }
+    }
+  }
+  @media #{$ui-tablet} {
+    height: 90px;
+    .headerContent {
+      justify-content: flex-end;
+      gap: 16px;
+      position: relative;
+
+      #burgerIcon {
+        @include burgerIcon;
+      }
+      .callUs > a, a + span {
+        display: none;
+      }
+    }
+  }
+  @media #{$ui-tablet-interval} {
+    .headerContent {
+      .logo {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
+      }
+      nav.links {
+        background-color: $color-main;
+        position: fixed;
+        overflow: hidden;
+        width: 100vw;
+        height: 0;
+        padding: 0 4vw;
+        top: 90px;
+        left: 0;
+        transition: height 0.4s;
+        ul {
+          align-items: center;
+          height: 100%;
+        }
+        &.active {
+          overflow: auto;
+          height: 90px;
+          transition: height 0.4s;
+        }
+      }
+    }
+  }
+  @media #{$ui-mobile-interval} {
+    .headerContent {
+      .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      nav.links {
+        background-color: $color-main;
+        position: fixed;
+        overflow: hidden;
+        width: 100vw;
+        height: 0;
+        padding: 0 4vw;
+        top: 90px;
+        left: 0;
+        transition: height 0.4s;
+        ul {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
+        &.active {
+          overflow: auto;
+          height: calc(100vh - 90px);
+          transition: height 0.4s;
+        }
+      }
+    }
+  }
+}

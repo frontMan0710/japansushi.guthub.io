@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { font-family: "Jost", sans-serif; width: 100%; height: 100%; cursor: url("../img/cursor.svg"), auto; }
+ul, ul li { list-style: none; }
+a { cursor: pointer; text-decoration: none; font-size: inherit; font-weight: inherit; }
+
+$ui-desktop-min: "(min-width: 1120px)";
+$ui-desktop-interval: "screen and (min-width: 1120px)";
+$ui-header: "(min-width: 1440px)";
+$ui-header-interval: "(max-width: 1439px) and (min-width: 720px)";
+
+$ui-tablet: "(max-width: 1119px)";
+$ui-tablet-min: "(min-width: 720px)";
+$ui-tablet-interval: "screen and (max-width: 1119px) and (min-width: 720px)";
+
+$ui-mobile: "(max-width: 719px)";
+$ui-mobile-min: "(min-width: 320px)";
+$ui-mobile-interval: "only screen and (max-width: 719px) and (min-width: 320px)";
+
+$ui-mouse-device: "(hover: hover) and (pointer: fine)";
+$ui-touch-device: "(hover: none) and (pointer: coarse)";
+
+$ui-mobile-retina: "(-webkit-min-device-pixel-ratio: 2)";
+
+
+$ui1-layer: 1; // По умолчанию
+$ui2-layer: 2; // Для перекрывающих элементов в общем потоке
+$ui3-layer: 3; // Для сайдбара
+$ui4-layer: 4; // Для хедера
+$ui5-layer: 5; // Для модалов
+
+
+$color-black: rgba(56, 54, 57, 1);
+$color-shadow: rgba(56, 54, 57, 0.08);
+$color-dark: rgba(166, 155, 155, 1);
+$color-main: rgba(235, 225, 208, 1);
+$color-gold: rgba(249, 191, 90, 1);
+$color-red: rgba(239, 94, 60, 1);
+
+$font-72: 72px;
+$font-64: clamp(40px, 4.44vw, 64px);
+$font-52: clamp(40px, 3.61vw, 52px);
+$font-32: clamp(20px, 2.22vw, 32px);
+$font-16: 16px;
+$font-12: 12px;
+
+
+@media #{$ui-mobile-interval} { a, button, input[type="radio"] { cursor: none; } }
+
+html, body {
+  scroll-behavior: smooth;
+}
+.contentBorder {
+  @media #{$ui-desktop-interval} {
+    width: 85vw;
+    max-width: 1632px;
+  }
+  @media #{$ui-tablet} {
+    width: 92vw;
+  }
+  height: 100%;
+  margin: 0 auto;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  main {
+    flex: 1 1 auto;
+  }
+}
+section {
+  margin-top: 112px;
+  &:first-child {
+    margin-top: 0;
+  }
+  @media #{$ui-mobile} {
+    margin-top: 96px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+@mixin burgerIcon {
+  background-color: inherit;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  span {
+    background-color: $color-black;
+    position: relative;
+    width: 15px;
+    height: 2px;
+    transition: background-color 0.4s;
+    &::before, &::after {
+      content: "";
+      background-color: $color-black;
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      left: 0;
+      transition: 0.3s;
+    }
+    &::before {
+      bottom: -6px;
+    }
+    &::after {
+      top: -6px;
+    }
+  }
+  &.active {
+    span {
+      background-color: transparent;
+      transition: background-color 0.2s;
+      &::before, &::after {
+        left: -1px;
+        transition: 0.3s;
+      }
+      &::before {
+        transform: rotate(-45deg);
+        bottom: -0;
+      }
+      &::after {
+        transform: rotate(45deg);
+        top: -0;
+      }
+    }
+  }
+}
+@mixin redButton {
+  background-color: $color-red;
+  color: $color-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  width: 200px;
+  height: 55px;
+  border-radius: 48px;
+}
+@mixin prodCard($shadow : false, $hover : false) {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: ease 0.3s;
+  @if $shadow {
+    box-shadow: 0 2px 24px 0 $color-shadow;
+  }
+  @if $hover {
+    &:hover {
+      transform: translateY(-16px);
+      transition: ease 0.2s;
+    }
+  }
+  width: clamp(288px, 15vw, 253px);
+  padding: 24px;
+  border-radius: 16px;
+
+  .cardTitle {
+    margin-top: 0;
+    h3 {
+      font-size: $font-16;
+      font-weight: 400;
+    }
+    p {
+      font-size: $font-12;
+      font-weight: 300;
+    }
+  }
+  .cardOptions {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    div:has(span) {
+      color: $color-red;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 100%;
+      .weight {
+        font-size: $font-12;
+        font-weight: 300;
+      }
+      .price {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    div:has(button) {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      button {
+        border-radius: 8px;
+        cursor: pointer;
+        abbr {
+          font-weight: 300;
+          font-size: $font-12;
+          outline: none;
+        }
+      }
+      .buy {
+        background-color: $color-black;
+        border: none;
+        width: 36px;
+        height: 33px;
+      }
+      .modal {
+        font-family: "Jost", sans-serif;
+        background-color: inherit;
+        color: $color-black;
+        border: 1px solid $color-black;
+        width: 60px;
+        height: 33px;
+      }
+    }
+  }
+}

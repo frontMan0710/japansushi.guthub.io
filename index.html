@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Bar</title>
+    <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="headerContent">
+            <div id="burgerIcon">
+                <span></span>
+            </div>
+            <div class="logo">
+                <img src="./img/logo.svg"  width="59" height="36" alt="logo">
+            </div>
+            <nav class="links">
+                <ul>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="callUs">
+                <img class="phoneIcon icon" src="./img/phone.svg" width="24" height="24" alt="call us">
+                <a href="tel:+44 845 123 45 67">+44 845 123 45 67</a>
+                <span>С 8:00 до 23:00</span>
+            </div>
+            <ul class="userMenu">
+                <li><a href="#"><img src="./img/cart.svg" class="icon" width="24" height="24" alt="cart"></a></li>
+                <li><a href="#"><img src="./img/user.svg" class="icon" width="24" height="24" alt="profile"></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="start">
+            <div class="contentBorder startContent">
+                <div class="sideText">
+                    <h1>Вкус Японии</h1>
+                    <p>Доставим твои <span>любимые суши</span>.
+                        Закажи и доставим к твоей двери одним нажатием.</p>
+                    <a href="#topProducts">Заказать сейчас</a>
+                </div>
+                <div class="sideImage">
+                    <img src="./img/start.webp" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="first">
+            <div class="contentBorder firstContent">
+                <h2>Почему мы?</h2>
+                <p>Потому что:</p>
+                <div class="firstTextContent">
+                    <ol>
+                        <li>
+                            <div class="contentWrapper">
+                                <span>ОТЛИЧНАЯ ВЫГОДА</span>
+                                <p><span>скидка 20%</span> на предварительный заказ</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentWrapper">
+                                <span>ОПЫТНЫЕ ПОВАРА</span>
+                                <p>постоянный контроль опытным шефом</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentWrapper">
+                                <span>ПРЕМИУМ</span>
+                                <p>только свежие ингредиенты прямиком с Японии</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentWrapper">
+                                <span>ДОСТАВКА</span>
+                                <p>быстрая доставка за пределы города</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <div class="sideImage">
+                        <img src="./img/first.webp" width="473" height="346" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="second" id="topProducts">
+            <div class="contentBorder secondContent">
+                <h2>ТОПЫ</h2>
+                <div class="swiper tops">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide prodCard">
+                            <img src="./img/prodCard.webp" alt="">
+                            <div class="cardTitle">
+                                <h3>Мейро маки</h3>
+                                <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                            </div>
+                            <div class="cardOptions">
+                                <div>
+                                    <span class="weight">220 г</span>
+                                    <span class="price">5.99$</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                    <button type="button" class="buy">
+                                        <img src="./img/cartIcon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        <section class="third">
+            <div class="contentBorder thirdContent">
+                <h2>КАТЕГОРИИ</h2>
+                <div class="swiper categorySlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide categoryCard active">
+                            <img src="./img/ptc.svg" alt="">
+                            <span class="categoryName">Роллы</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-1.svg" alt="">
+                            <span class="categoryName">Суши</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-2.svg" alt="">
+                            <span class="categoryName">Сеты</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-3.svg" alt="">
+                            <span class="categoryName">Сашими</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-4.svg" alt="">
+                            <span class="categoryName">Гунканы</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-5.svg" alt="">
+                            <span class="categoryName">Супы</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-6.svg" alt="">
+                            <span class="categoryName">Поке</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-7.svg" alt="">
+                            <span class="categoryName">WOK</span>
+                        </div>
+                        <div class="swiper-slide categoryCard">
+                            <img src="./img/ptc-8.svg" alt="">
+                            <span class="categoryName">Устрицы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="prodList">
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prodCard">
+                        <img src="./img/prodCard.webp" alt="">
+                        <div class="cardTitle">
+                            <h3>Мейро маки</h3>
+                            <p>лосось, авокадо, огурец, кунжут, майонез, рис, нори</p>
+                        </div>
+                        <div class="cardOptions">
+                            <div>
+                                <span class="weight">220 г</span>
+                                <span class="price">5.99$</span>
+                            </div>
+                            <div>
+                                <button type="button" class="modal"><abbr title="калории, белки, жиры и углеводы">КБЖУ</abbr></button>
+                                <button type="button" class="buy">
+                                    <img src="./img/cartIcon.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fourth">
+            <div class="fourthContent">
+                <p>БЕСПЛАТНАЯ ДОСТВКА ОТ 50 $</p>
+                <p>БЕСПЛАТНАЯ ДОСТВКА ОТ 50 $</p>
+                <p>БЕСПЛАТНАЯ ДОСТВКА ОТ 50 $</p>
+                <p>БЕСПЛАТНАЯ ДОСТВКА ОТ 50 $</p>
+            </div>
+        </section>
+        <section class="fifth">
+            <div class="contentBorder fifthContent">
+                <div class="sideText">
+                    <h2>Условия доставки</h2>
+                    <p>Суши премиум-класса теперь можно
+                        заказать не только в японском ресторане,
+                        но и на дом и в офис.
+                        <br>
+                        <br>
+                        Мы разделили Лондон на условные зоны доставки - зеленую и желтую. Четко определяем время доставки для каждой зоны.
+                    </p>
+                    <a href="javascript:void(0)">Узнать больше</a>
+                </div>
+                <div class="sideImage">
+                    <img src="./img/fifth.webp" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="sixth">
+            <div class="contentBorder sixthContent">
+                <div class="sideImage">
+                    <img src="./img/sixth.webp" alt="">
+                </div>
+                <div class="sideText">
+                    <h2>Часы открытия</h2>
+
+                    <ul class="openTimes">
+                        <li>
+                            <span>Ресторан:</span>
+                            <ul>
+                                <li>ПН-ВС, с 10:00 до 23:00</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Доставка:</span>
+                            <ul>
+                                <li>ПН-ПТ, с 10:00 до 23:00</li>
+                                <li>СБ-ВС, с 10:00 до 21:00</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Контакты:</span>
+                            <ul>
+                                <li>511, Park Lane, London</li>
+                                <li>9595, Kings Road, London</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="seventh">
+            <div class="seventhContent">
+                <h3>Категории</h3>
+                <ul>
+                    <li><a href="javascript:void(0)">РОЛЛЫ</a></li>
+                    <li><a href="javascript:void(0)">СУШИ</a></li>
+                    <li><a href="javascript:void(0)">СЕТЫ</a></li>
+                    <li><a href="javascript:void(0)">САШИМИ</a></li>
+                    <li><a href="javascript:void(0)">ГУНКАНЫ</a></li>
+                    <li><a href="javascript:void(0)">ГОРЯЧЕЕ</a></li>
+                    <li><a href="javascript:void(0)">ПОКЕ</a></li>
+                    <li><a href="javascript:void(0)">WOK</a></li>
+                    <li><a href="javascript:void(0)">УСТРИЦЫ</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contentBorder footerContent">
+            <div class="footerNav">
+                <div class="logo">
+                    <img src="./img/logoWhite.svg"  width="59" height="36" alt="logo">
+                </div>
+                <nav class="links">
+                    <ul>
+                        <li><a href="#">Категории</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <div class="userMenu">
+                    <ul class="socialLinks">
+                        <li><a href="#"><img src="./img/facebook.svg" class="icon" width="18" height="18" alt=""></a></li>
+                        <li><a href="#"><img src="./img/social.svg" class="icon" width="18" height="18" alt=""></a></li>
+                        <li><a href="#"><img src="./img/instagram.svg" class="icon" width="18" height="19" alt=""></a></li>
+                    </ul>
+                    <div class="callUs">
+                        <a href="tel:+44 845 123 45 67">+44 845 123 45 67</a>
+                        <span>С 8:00 до 23:00</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footerPolicy">
+                <p>© Copyright All Rights ReservedSushi Boom London, 2023</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="./vendor/jquery-3.7.1.min.js"></script>
+<script src="./vendor/swiper/swiper-bundle.min.js"></script>
+<script src="./js/header.js"></script>
+<script src="./js/slider.js"></script>
+<script src="./js/onscrollanimation.js"></script>
+</body>
+</html>

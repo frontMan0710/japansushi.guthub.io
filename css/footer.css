@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Jost", sans-serif;
+  width: 100%;
+  height: 100%;
+  cursor: url("../img/cursor.svg"), auto;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@media only screen and (max-width: 719px) and (min-width: 320px) {
+  a, button, input[type=radio] {
+    cursor: none;
+  }
+}
+html, body {
+  scroll-behavior: smooth;
+}
+
+.contentBorder {
+  height: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1120px) {
+  .contentBorder {
+    width: 85vw;
+    max-width: 1632px;
+  }
+}
+@media (max-width: 1119px) {
+  .contentBorder {
+    width: 92vw;
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+.wrapper main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+section {
+  margin-top: 112px;
+}
+section:first-child {
+  margin-top: 0;
+}
+@media (max-width: 719px) {
+  section {
+    margin-top: 96px;
+  }
+  section:first-child {
+    margin-top: 0;
+  }
+}
+
+footer {
+  background-color: rgb(56, 54, 57);
+  height: 140px;
+}
+footer .footerNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 50%;
+}
+footer .footerNav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+footer .footerNav nav.links {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+footer .footerNav nav.links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+footer .footerNav nav.links ul li {
+  font-weight: 300;
+  font-size: 16px;
+}
+footer .footerNav nav.links ul li a {
+  color: rgb(235, 225, 208);
+}
+footer .footerNav .userMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+footer .footerNav .userMenu .socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+footer .footerNav .userMenu .socialLinks li {
+  height: 24px;
+}
+footer .footerNav .userMenu .callUs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footerNav .userMenu .callUs a, footer .footerNav .userMenu .callUs span {
+  line-height: 20px;
+}
+footer .footerNav .userMenu .callUs a {
+  color: rgb(235, 225, 208);
+  font-weight: 400;
+  font-size: 16px;
+}
+footer .footerNav .userMenu .callUs span {
+  color: rgb(235, 225, 208);
+  font-weight: 300;
+  font-size: 12px;
+}
+footer .footerPolicy {
+  color: rgb(235, 225, 208);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 300;
+  font-size: 12px;
+  width: 100%;
+  height: 50%;
+}
