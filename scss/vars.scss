@@ -47,6 +47,9 @@ $font-12: 12px;
 
 @media #{$ui-mobile-interval} { a, button, input[type="radio"] { cursor: none; } }
 
+html {
+  height: auto;
+}
 html, body {
   scroll-behavior: smooth;
 }
@@ -157,7 +160,7 @@ section {
   }
   @if $hover {
     &:hover {
-      transform: translateY(-16px);
+      //transform: translateY(-16px);
       transition: ease 0.2s;
     }
   }
@@ -222,6 +225,19 @@ section {
         width: 60px;
         height: 33px;
       }
+    }
+  }
+}
+@mixin sideImage($sizing : false) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  @if $sizing {
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 }

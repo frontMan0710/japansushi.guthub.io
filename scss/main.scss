@@ -30,10 +30,7 @@
           }
         }
         .sideImage {
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          width: 50%;
+          @include sideImage(false)
         }
       }
     }
@@ -72,12 +69,6 @@
     section {
       .contentBorder {
         .sideText {
-          width: 50%;
-        }
-        .sideImage {
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
           width: 50%;
         }
       }
@@ -156,6 +147,9 @@
                 }
               }
             }
+            .sideImage {
+              @include sideImage(true)
+            }
           }
         }
       }
@@ -199,7 +193,6 @@
           }
           .prodList {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
             gap: 24px;
             width: 100%;
@@ -229,6 +222,9 @@
           align-items: center;
           justify-content: space-between;
           padding: 0 90px 0 90px;
+          .sideImage {
+            @include sideImage(true)
+          }
           .sideText {
             display: flex;
             flex-direction: column;
@@ -255,6 +251,9 @@
           align-items: center;
           justify-content: space-between;
           padding: 0 90px 0 90px;
+          .sideImage {
+            @include sideImage(true)
+          }
           .sideText {
             display: flex;
             flex-direction: column;

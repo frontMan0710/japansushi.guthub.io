@@ -29,6 +29,10 @@ a {
     cursor: none;
   }
 }
+html {
+  height: auto;
+}
+
 html, body {
   scroll-behavior: smooth;
 }

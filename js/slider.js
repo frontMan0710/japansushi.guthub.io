@@ -14,3 +14,4 @@ const categories = new Swiper(".categorySlider", {
     slidesPerView: "auto",
     spaceBetween: "43px",
 })
+
