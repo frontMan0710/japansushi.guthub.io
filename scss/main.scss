@@ -157,7 +157,7 @@
         .secondContent {
           .swiper {
             width: 100%;
-            height: 498px;
+            //height: 498px;
             padding: 24px 0 24px 0;
             .swiper-wrapper {
               .prodCard {
@@ -316,5 +316,86 @@
         }
       }
     }
+    @media #{$ui-notebook-interval} {
+      section {
+        .contentBorder {
+          h2 {
+            font-size: $font-52;
+          }
+        }
+      }
+      .start {
+        height: 600px;
+        .startContent {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          display: flex;
+          gap: 50px;
+          height: 600px;
+          padding: 100px;
+          border-radius: 48px;
+          .sideText {
+            justify-content: center;
+            h1 {
+              line-height: 100%;
+            }
+          }
+        }
+      }
+      .first {
+        .firstContent {
+          h2 {
+            text-align: center;
+            font-weight: 600;
+          }
+          p {
+            font-weight: 400;
+          }
+          .firstTextContent {
+            display: flex;
+            justify-content: space-between;
+            gap: 64px;
+            margin-top: 30px;
+            ol {
+              li {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                height: 60px;
+                .contentWrapper {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  gap: 8px;
+                  span {
+                    font-weight: 500;
+                  }
+                  p {
+                    font-weight: 300;
+                  }
+                }
+                &:first-child {
+                  margin: 0;
+                }
+                &:nth-child(2) {
+                  margin: 40px 0 0 100px;
+                }
+                &:nth-child(3) {
+                  margin: 40px 0 0 200px;
+                }
+                &:nth-child(4) {
+                  margin: 40px 0 0 300px;
+                }
+              }
+            }
+            .sideImage {
+              @include sideImage(true)
+            }
+          }
+        }
+      }
+    }
+
   }
 }

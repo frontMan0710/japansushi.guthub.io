@@ -41,7 +41,7 @@ html, body {
   height: 100%;
   margin: 0 auto;
 }
-@media screen and (min-width: 1120px) {
+@media screen and (min-width: 1560px) {
   .contentBorder {
     width: 85vw;
     max-width: 1632px;
