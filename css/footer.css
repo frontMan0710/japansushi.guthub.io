@@ -36,6 +36,9 @@ html {
 html, body {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
 
 .contentBorder {
   height: 100%;
@@ -45,6 +48,11 @@ html, body {
   .contentBorder {
     width: 85vw;
     max-width: 1632px;
+  }
+}
+@media screen and (max-width: 1559px) and (min-width: 1120px) {
+  .contentBorder {
+    width: 85vw;
   }
 }
 @media (max-width: 1119px) {

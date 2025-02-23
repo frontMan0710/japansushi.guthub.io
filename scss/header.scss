@@ -58,7 +58,7 @@ header {
       }
     }
   }
-  @media #{$ui-desktop-interval} {
+  @media #{$ui-notebook-min} {
     height: 100px;
     .headerContent {
       gap: 60px;

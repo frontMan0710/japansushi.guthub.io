@@ -57,11 +57,17 @@ html {
 }
 html, body {
   scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .contentBorder {
   @media #{$ui-desktop-interval} {
     width: 85vw;
     max-width: 1632px;
+  }
+  @media #{$ui-notebook-interval} {
+    width: 85vw;
   }
   @media #{$ui-tablet} {
     width: 92vw;
@@ -148,6 +154,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   width: 200px;
@@ -174,7 +183,7 @@ section {
   padding: 24px;
   border-radius: 16px;
   @media #{$ui-notebook-interval} {
-    width: clamp(288px, 15vw, 253px);
+    width: clamp(253px, 15vw, 288px);
   }
   @media #{$ui-desktop-interval} {
     width: calc((100% - 96px) / 5);
@@ -216,6 +225,7 @@ section {
       gap: 16px;
       button {
         border-radius: 8px;
+        user-select: none;
         cursor: pointer;
         abbr {
           font-weight: 300;
@@ -229,7 +239,7 @@ section {
         width: 36px;
         height: 33px;
       }
-      .modal {
+      .openModal {
         font-family: "Jost", sans-serif;
         background-color: inherit;
         color: $color-black;
@@ -250,6 +260,105 @@ section {
     img {
       max-width: 100%;
       height: auto;
+    }
+  }
+}
+@mixin modal {
+  background-color: transparent;
+  position: fixed;
+  //display: none;
+  display: flex;
+  z-index: $ui5-layer;
+  width: 100%;
+  height: 100%;
+  left: -100vw;
+  top: 0;
+  opacity: 0;
+  transition: background-color 1s linear, opacity 0.3s;
+  &.active {
+    //display: flex;
+    left: 0;
+    opacity: 1;
+    background-color: rgba($color-black, 0.1);
+    transition: background-color 1s linear, opacity 0.4s;
+  }
+  .modal {
+    background-color: $color-main;
+    box-shadow: 0 2px 24px 0 $color-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    gap: 60px;
+    width: clamp(720px, 57.29vw, 1100px);
+    height: clamp(440px, 31.25vw, 600px);
+    padding: clamp(40px, 3.12vw, 60px);
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    button.close {
+      background-color: inherit;
+      position: absolute;
+      cursor: pointer;
+      width: clamp(10px, 1.04vw, 20px);
+      height: clamp(10px, 1.04vw, 20px);
+      top: clamp(37px, 3.12vw, 60px);
+      right: clamp(37px, 3.12vw, 60px);
+      border: none;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .mobileProdName {
+      display: none;
+    }
+    .cardDesc {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+      height: 100%;
+      .mobileProdPrice, .mobileAddCart {
+        display: none;
+      }
+      .modalContent {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .prodName {
+          font-weight: 700;
+          //font-size: $font-24-desktop;
+        }
+        .prodDesc, .weight, .energyValue span, .energyValue li span {
+          font-weight: 400;
+          //font-size: $font-14-desktop;
+        }
+        .energyValue {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          max-width: 390px;
+          li {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        .prodPrices {
+          font-weight: 600;
+          font-size: clamp(16px, 1.04vw, 20px);
+        }
+      }
+      .addToCart {
+        @include redButton;
+        width: 100%;
+      }
     }
   }
 }

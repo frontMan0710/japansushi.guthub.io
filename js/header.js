@@ -5,5 +5,6 @@ $(function () {
     $burger.on("click", () => {
         $burger.toggleClass("active")
         $menu.toggleClass("active")
+        //$("body").toggleClass("lock")
     })
 })

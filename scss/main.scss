@@ -156,6 +156,304 @@
       .second {
         .secondContent {
           .swiper {
+            position: relative;
+            width: 100%;
+            //height: 498px;
+            //min-height: 467px;
+            height: clamp(467px, 29.93vw, 511px);
+            padding: 24px 0 24px 0;
+            .swiper-button-next,
+            .swiper-button-prev {
+              position: absolute !important;
+              margin: 0 !important;
+              top: auto !important;
+              left: auto !important;
+              right: auto !important;
+              bottom: 0 !important;
+              color: transparent;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 80px;
+              height: 16px;
+              &.swiper-button-next {
+                background-image: url("../img/swiperArrow.svg") !important;
+                right: 0 !important;
+              }
+              &.swiper-button-prev {
+                background-image: url("../img/swiperArrow.svg") !important;
+                right: 104px !important;
+                transform: rotate(180deg);
+              }
+            }
+            .swiper-wrapper {
+              height: auto;
+              .prodCard {
+                @include prodCard(true, false);
+              }
+            }
+          }
+        }
+      }
+      .third {
+        .thirdContent {
+          .categorySlider {
+            width: 100%;
+            height: 168px;
+            padding: 24px 0 24px 0;
+            .swiper-wrapper {
+              .categoryCard {
+                box-shadow: 0 2px 24px 0 $color-shadow;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                gap: 8px;
+                width: 100px;
+                height: 120px;
+                border-radius: 10px;
+                &::before {
+                  content: "";
+                  background-color: $color-gold;
+                  position: absolute;
+                  z-index: 1;
+                  width: 0;
+                  height: 0;
+                  border-radius: 100%;
+                  transition: width 0.6s, height 0.6s;
+                }
+                .categoryName, img {
+                  z-index: 2;
+                }
+                &.active {
+                  &::before {
+                    width: 200px;
+                    height: 200px;
+                    transition: width 0.5s, height 0.5s;
+                  }
+                }
+              }
+            }
+          }
+          .prodList {
+            width: 100%;
+            .tabItem {
+              display: none;
+              &.active {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                width: 100%;
+              }
+              .prodCard {
+                @include prodCard(true, true);
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+      .fourth {
+        .fourthContent {
+          display: flex;
+          overflow: hidden;
+          gap: 93px;
+          p {
+            color: $color-red;
+            text-wrap: nowrap;
+            font-size: $font-72;
+            font-weight: 600;
+          }
+        }
+      }
+      .fifth {
+        .fifthContent {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 90px 0 90px;
+          .sideImage {
+            @include sideImage(true)
+          }
+          .sideText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 40px;
+            h1 {
+              font-weight: 600;
+              font-size: $font-52;
+            }
+            p {
+              font-weight: 300;
+              font-size: $font-16;
+            }
+            a {
+              @include redButton;
+            }
+          }
+        }
+      }
+      .sixth {
+        .sixthContent {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 90px 0 90px;
+          .sideImage {
+            @include sideImage(true)
+          }
+          .sideText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 40px;
+            .openTimes {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              li {
+                span {
+                  font-weight: 500;
+                  &~ul {
+                    li {
+                      font-size: $font-16;
+                      font-weight: 300;
+                      margin-top: 8px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .seventh {
+        background-image: url("../img/seventh.svg");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        .seventhContent {
+          color: $color-main;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 32px;
+          padding: 104px 0 104px 0;
+          h3 {
+            font-weight: 400;
+            font-size: 20px;
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            li {
+              a {
+                color: $color-main;
+                font-weight: 500;
+                font-size: $font-52;
+              }
+            }
+          }
+        }
+      }
+      .modalWrapper {
+        @include modal;
+      }
+    }
+    @media #{$ui-notebook-interval} {
+      section {
+        .contentBorder {
+          h2 {
+            font-size: $font-52;
+          }
+        }
+      }
+      .start {
+        height: 600px;
+        .startContent {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: right;
+          display: flex;
+          gap: 50px;
+          height: 600px;
+          padding: 100px;
+          border-radius: 48px;
+          .sideText {
+            justify-content: center;
+            h1 {
+              line-height: 100%;
+            }
+          }
+        }
+      }
+      .first {
+        .firstContent {
+          h2 {
+            text-align: center;
+            font-weight: 600;
+          }
+          p {
+            font-weight: 400;
+          }
+          .firstTextContent {
+            display: flex;
+            justify-content: space-between;
+            gap: 64px;
+            margin-top: 30px;
+            ol {
+              li {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                height: 60px;
+                .contentWrapper {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  gap: 8px;
+                  span {
+                    font-weight: 500;
+                  }
+                  p {
+                    font-weight: 300;
+                  }
+                }
+                &:first-child {
+                  margin: 0;
+                }
+                &:nth-child(2) {
+                  margin: 40px 0 0 100px;
+                }
+                &:nth-child(3) {
+                  margin: 40px 0 0 200px;
+                }
+                &:nth-child(4) {
+                  margin: 40px 0 0 300px;
+                }
+              }
+            }
+            .sideImage {
+              @include sideImage(true)
+            }
+          }
+        }
+      }
+      .second {
+        .secondContent {
+          .swiper {
             width: 100%;
             //height: 498px;
             padding: 24px 0 24px 0;
@@ -311,86 +609,6 @@
                 font-weight: 500;
                 font-size: $font-52;
               }
-            }
-          }
-        }
-      }
-    }
-    @media #{$ui-notebook-interval} {
-      section {
-        .contentBorder {
-          h2 {
-            font-size: $font-52;
-          }
-        }
-      }
-      .start {
-        height: 600px;
-        .startContent {
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: right;
-          display: flex;
-          gap: 50px;
-          height: 600px;
-          padding: 100px;
-          border-radius: 48px;
-          .sideText {
-            justify-content: center;
-            h1 {
-              line-height: 100%;
-            }
-          }
-        }
-      }
-      .first {
-        .firstContent {
-          h2 {
-            text-align: center;
-            font-weight: 600;
-          }
-          p {
-            font-weight: 400;
-          }
-          .firstTextContent {
-            display: flex;
-            justify-content: space-between;
-            gap: 64px;
-            margin-top: 30px;
-            ol {
-              li {
-                display: flex;
-                align-items: center;
-                gap: 32px;
-                height: 60px;
-                .contentWrapper {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-between;
-                  gap: 8px;
-                  span {
-                    font-weight: 500;
-                  }
-                  p {
-                    font-weight: 300;
-                  }
-                }
-                &:first-child {
-                  margin: 0;
-                }
-                &:nth-child(2) {
-                  margin: 40px 0 0 100px;
-                }
-                &:nth-child(3) {
-                  margin: 40px 0 0 200px;
-                }
-                &:nth-child(4) {
-                  margin: 40px 0 0 300px;
-                }
-              }
-            }
-            .sideImage {
-              @include sideImage(true)
             }
           }
         }
